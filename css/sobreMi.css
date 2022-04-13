@@ -1,0 +1,58 @@
+.seccion_fondo{
+    box-sizing: border-box;
+    padding: 3rem 1rem;
+    background: linear-gradient(transparent,#11415d);
+}
+
+.subtitulo_seccion{
+    font-family: 'Russo One', sans-serif;
+    text-align: center;
+    margin: 5rem auto 4rem auto;
+    font-size: 3rem;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.seccion_sobremi_container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sobremi_foto{
+    width: 30%;
+}
+
+.foto_autor{
+    width: 100%;
+}
+
+.sobremi_texto{
+    color: #ffffff;
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.1rem;
+    width: 58%;
+}
+
+@media screen and (max-width: 767px) {
+    .sobremi_foto{
+        width: 100%;
+        margin-bottom: 1.2rem;
+    }
+    .seccion_sobremi_container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .sobremi_texto{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1255px) {
+    .sobremi_texto{
+        font-size: 1.55rem;
+    }
+}
+

@@ -1,0 +1,377 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.fondo{
+    width: 100%;
+}
+.cabecera{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    background-attachment: fixed;
+}
+
+.barra_navegacion{
+    position: fixed;
+    width: 100%;
+    transition: 1s;
+    z-index: 2;
+}
+.contenedorNav{
+    background-color: rgba(40,43,89,1);
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    transition: 0.5s;
+    animation: cambioColor 20s linear infinite;
+    box-shadow: 0 4px 5px #000000;
+}
+
+@keyframes cambioColor{
+    0%{
+        background: #081040;
+    }
+    2%{
+        background: #11415d;
+    }
+    25%{
+        background-color: #1a6590;
+    }
+    50%{
+        background: #2389c4;
+    }
+    75%{
+        background: #337aa6;
+    }
+    100%{
+        background: #081040;
+    }
+}
+
+.contenedorNav_logo{
+    margin-right: 2em;
+}
+
+.contenedorNav_menu{
+    display: flex;
+}
+
+.contenedorNav_opcion:nth-child(1){
+    display: none;
+}
+
+.link_nav{
+    list-style: none;
+    color: #ffffff;
+    margin-right: 1.40rem;
+    text-decoration: none;
+}
+
+.contenedorNav_opcion:last-child .link_nav{
+    margin-right: 0;
+}
+
+.link_nav:hover{
+    color: #c19dff;
+    text-decoration: underline;
+}
+
+.link_nav:active{
+    color: #8a47ff;
+}
+
+.nav_menu{
+    display: none;
+    z-index: 1;
+}
+
+.nav_menu > span{
+    display: block;
+    width: 50px;
+    height: 2px;
+    border-radius: 9999px;
+    background-color: white;
+}
+
+.nav_menu > span:not(:last-child){
+    margin-bottom: 10px;
+}
+
+.nav_menu.active{
+    transition-delay: 0.8s;
+    transform: rotate(45deg);
+}
+
+.nav_menu.active > span:nth-child(2){
+    width: 0;
+}
+
+.nav_menu.active > span:nth-child(1),
+.nav_menu.active > span:nth-child(3){
+    transition-delay: .4s;
+}
+
+.nav_menu.active > span:nth-child(1){
+    transform: translateY(12px);
+}
+
+.nav_menu.active > span:nth-child(3){
+    transform: translateY(-12px) rotate(90deg);
+}
+
+.nav_menu, .nav_menu > span{
+    transition: all .4s ease-in-out;
+}
+
+.menu{
+    display: none;
+}
+
+.portada{
+    display: flex;
+    padding: 10% 0 0 0;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.portada_presentacion{
+    color: #ffffff;
+    width: 50%;
+    z-index: 1;
+}
+
+.portada_nombre{
+    font-size: 3rem;
+}
+
+.portada_descripcion{
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+.fuente_especial{
+    font-family: 'Russo One', sans-serif;
+}
+
+.fuente_normal{
+    font-family: sans-serif;
+}
+
+.portada_redesSociales{
+    margin: 1rem 0;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconoRedSocial:hover{
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+.portada_imagen{
+    width: 40%;
+    height: 520px;
+    background: url(../img/planeta.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: movimientoPlaneta 4s linear infinite;
+}
+
+@keyframes movimientoPlaneta{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/*Asteroides*/
+
+.asteroide{
+    position: absolute;
+    bottom: -150;
+    animation: asteroides 3s linear infinite;
+    visibility: hidden;
+}
+
+.asteroide:nth-child(1){
+    left: 5%;
+    animation-duration: 15s;
+    animation-delay: 9s;
+}
+
+.asteroide:nth-child(2){
+    left: 24%;
+    animation-duration: 18s;
+    animation-delay: 12s;
+}
+
+.asteroide:nth-child(3){
+    left: 45%;
+    animation-duration: 12s;
+    animation-delay: 6s;
+}
+
+.asteroide:nth-child(4){
+    left: 70%;
+    animation-duration: 17s;
+    animation-delay: 11s;
+}
+
+.asteroide:nth-child(5){
+    left: 90%;
+    animation-duration: 9s;
+    animation-delay: 3s;
+}
+
+@keyframes asteroides{
+    0%{
+        bottom: 0;
+        visibility: visible;
+    }
+    100%{
+        bottom: 100vh;
+        transform: rotate(360deg);
+        visibility: visible;
+    }
+}
+
+@keyframes movimiento{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/*MEDIA QUERYS*/
+
+@media screen and (max-width: 767px) {
+    .contenedorNav{
+        font-size: 1.4rem; 
+    }
+    .nav_menu{
+        display: block;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+    }
+    .nav_menu_fixed{
+        position: fixed;
+        top: 20px;
+        right: 20px;
+    }
+    .contenedorNav_menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: rgba(7,64,115,0.9);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        align-items: stretch;
+        padding-top: 10%;
+        clip-path: polygon(100% 0%, 100% 0%, 100% 0%, 100% 0%);
+        transition: 0.5s;
+        overflow-y: auto;
+    }
+    .menu_opened{
+        clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+    }
+    .contenedorNav_opcion{
+        padding: 25px;
+    }
+    .contenedorNav_opcion:nth-child(1){
+        display: block;
+    }
+    .contenedorNav_opcion .link_nav{
+        margin: 0;
+    }
+    .link_nav:hover{
+        color: #ffc5f9;
+        text-decoration: underline;
+    }
+    .link_nav:active{
+        color: #0c004e;
+    }
+    .portada_presentacion{
+        margin-top: 10rem;
+        width: 95%;
+    }
+    .portada_nombre{
+        font-size: 3rem;
+    }
+    .portada_descripcion{
+        font-size: 2rem;
+    }
+    .portada_nombre, .portada_descripcion{
+        text-align: center;
+    }
+    .portada_redesSociales{
+        width: 100%;
+        justify-content: space-around;
+    }
+    .portada_imagen{
+        display: none;
+    }
+    .asteroide:nth-child(1){
+        display: none;
+    }
+    .asteroide:nth-child(2){
+        display: none;
+    }
+    .asteroide:nth-child(3){
+        display: none;
+    }
+    .asteroide:nth-child(4){
+        display: none;
+    }
+    .asteroide:nth-child(5){
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1140px) {
+    .contenedorNav{
+        font-size: 1.35rem;
+        flex-direction: column;  
+    }
+    .contenedorNav_menu{
+        margin-top: 1rem;
+    }
+    .portada_imagen{
+        width: 35%;
+        background-size: contain;
+    }
+    .portada_redesSociales{
+        width: 60%;
+        justify-content: space-around;
+    }
+    .asteroide:nth-child(2){
+        display: none;
+    }
+    .asteroide:nth-child(5){
+        display: none;
+    }
+}

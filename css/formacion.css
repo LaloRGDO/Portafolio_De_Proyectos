@@ -1,0 +1,57 @@
+.seccion_formacion{
+    background: linear-gradient(transparent, #2daffa);
+    padding: 6vh 0;
+}
+
+.contenedor_formacion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.estudio{
+    width: 25vw;
+    overflow: hidden;
+    margin: 48px 1.5rem;
+}
+
+.logo_formacion{
+    background-color: white;
+    text-align: center;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_formacion img{
+    margin: auto 0;
+}
+
+.titulo{
+    color: white;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.3rem; 
+    margin: 2vh 0;
+    text-transform: uppercase;
+}
+
+.fecha{
+    color: white;
+    font-family: 'Russo One', sans-serif;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 976px) {
+    .estudio{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 977px) and (max-width: 1245px) {
+    .estudio{
+        width: 45%;
+        overflow: hidden;
+    }
+}

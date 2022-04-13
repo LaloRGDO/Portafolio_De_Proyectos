@@ -1,0 +1,53 @@
+.seccion_skills{
+    background: linear-gradient(transparent,#1A6590);
+    padding-bottom: 2rem;
+}
+
+.skills, .hobbies{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill, .hobbie{
+    width: 20%;
+    text-align: center;
+    margin: 1rem 0 3rem 0;
+}
+
+.descripcion_skill, .descripcion_hobbie{
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    margin-top: 1.5rem;
+}
+
+.skill_mensaje{
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.skill:hover .skillImg, .hobbie:hover .hobbieImg{
+    -webkit-transform:scale(1.3);
+    transform:scale(1.3);
+}
+
+.seccion_hobbies{
+    background: linear-gradient(transparent,#2389c4);
+    padding-bottom: 2rem;
+}
+
+
+@media screen and (max-width: 767px) {
+    .skill, .hobbie{
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1140px) {
+    .skill, .hobbie{
+        width: 33.3%;
+    }
+}

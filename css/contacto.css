@@ -1,0 +1,204 @@
+.contenedor-contacto{
+    margin-top: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contenedor_formulario{
+    text-align: center;
+    width: 45%;
+}
+
+.contacto{
+    width: 100%;
+    padding-top: 1em;
+    margin: 0 0 3em;
+    text-align: center;
+    border-radius: 8%;
+}
+
+.label{
+    font-family: 'Russo One', sans-serif;
+    color: #79c8ff;
+    font-size: 1.4em;
+}
+
+.input-padron{
+    display: block;
+    margin: 0.8rem auto;
+    font-size: 1.35em;
+    width: 80%;
+}
+
+.errorNombre, .errorCorreo, .correo_requerido, .errorAsunto, .errorMensaje{
+    /*background: rgb(255, 255, 255);*/
+    margin: 0 auto 0.4rem auto;
+    width: 80.3%;
+    font-size: 1.70rem;
+    justify-content: center;
+    font-family: sans-serif;
+    color: rgb(255, 94, 94);
+    display: inline-block;
+    height: 2rem;
+    display: none;
+    transition: .5s;
+}
+
+.aparecerMensaje{
+    display: block;
+}
+
+.enviar{
+    background: rgb(82, 48, 252);
+    text-decoration: none;
+    color: white;
+    font-family: 'Russo One', sans-serif;
+    font-size: 20px;
+    margin: 10px 19%;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 40%;
+    transition: 1s;
+}
+
+.enviar:hover{
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+.enviar:active{
+    background: rgb(33, 0, 196);
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+/*----------------contacto sin formulario--------------------*/
+
+.contenedor_iconos{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border-radius: 8%;
+    width: 45%;
+}
+
+.contenedor_iconos, .contacto{
+    background: rgba(45, 56, 64, 0.8);
+}
+
+.contacto_directo{
+    display: flex;
+    flex-direction: column;
+}
+
+.mensaje:nth-child(1){
+    font-size: 1.8rem;
+    align-self: center;
+}
+
+.icono_contacto{
+    display: flex;
+}
+
+.mensaje{
+    color: white;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.link_contacto{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    text-decoration: none;
+}
+
+.link_contacto:hover{
+    color: #7d8efb;
+}
+
+.descripcion_contacto{
+    margin-left: 1rem;
+}
+
+.contacto_iconos{
+    display: flex;
+    margin-top: 2rem;
+}
+
+.contacto_item{
+    margin-right: 1vw;
+}
+
+@media screen and (max-width: 767px) {
+    .contenedor-contacto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .portada_imagen_contacto{
+        display: none;
+    }
+    .contacto_directo{
+        justify-content: center;
+        align-items: center;
+    }
+    .contenedor_iconos{
+        width: 80%;
+    }
+    .link_contacto{
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .descripcion_contacto{
+        margin-left: 0;
+        margin-top: 1.8rem;
+        font-size: ;
+    }
+    .contacto_iconos{
+        justify-content: space-around;
+        align-items: center;
+    }
+    .contenedor_formulario{
+        width: 85%;
+        margin: 2rem auto;
+    }
+    .portada_imagen_contacto{
+        display: none;
+    }
+    .contacto{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1122px) {
+    .contenedor_formulario{
+        width: 80%;
+        margin: 2rem auto;
+    }
+    .contenedor-contacto{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor_iconos{
+        width: 80%;
+    }
+    .portada_imagen_contacto{
+        display: none;
+    }
+    .contacto{
+        width: 100%;
+    }
+}
