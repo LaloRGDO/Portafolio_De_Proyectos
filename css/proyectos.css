@@ -14,6 +14,7 @@
     justify-content: center;
     width: 100%;
     margin: 2rem 0;
+    flex-wrap: wrap;
 }
 
 .proyecto:nth-child(even) .opcionesProyecto{
@@ -72,6 +73,32 @@
     transform:scale(1.2);
 }
 
+.botonMostrar{
+    background: none;
+    font-family: 'Russo One', sans-serif;
+    font-size: 2rem;
+    color: #ffffff;
+    margin: 2rem auto;
+    border: 2px solid #ffffff;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 5px;
+}
+
+.botonMostrar:hover{
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+
+.botonMostrar{
+    display: block;
+    margin-top: 3rem;
+}
+
+.desaparecer{
+    display: none;
+}
+
 @media screen and (max-width: 832px) {
     .proyecto{
         display: flex;
@@ -100,6 +127,9 @@
     .insignia{
         display: none;
     }
+    .desaparecer{
+        display: none;
+    }
 }
 
 @media screen and (min-width: 833px) and (max-width: 1160px) {
@@ -126,6 +156,9 @@
         order: 0;
     }
     .insignia{
+        display: none;
+    }
+    .desaparecer{
         display: none;
     }
 }
